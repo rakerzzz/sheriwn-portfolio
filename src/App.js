@@ -163,7 +163,7 @@ function App() {
       </div>
       <div className="container  bg-white d-flex flex-column align-items-center justify-content-center">
         <div className="d-flex flex-column w-100 text-center px-2 my-4">
-          <h1 className="mb-1 fw-bold">SKILLS</h1>
+          <h1 className="mb-1 fw-bold mt-5">SKILLS</h1>
           <hr className="m-0" />
         </div>
 
@@ -290,7 +290,7 @@ function App() {
       </div>
       <div className="container bg-light d-flex flex-column align-items-center justify-content-center">
         <div className="d-flex flex-column w-100 text-center px-2 my-4">
-          <h1 className="mb-1 fw-bold">PROJECTS</h1>
+          <h1 className="mb-1 fw-bold mt-5">PROJECTS</h1>
           <hr className="m-0" />
         </div>
 
@@ -406,7 +406,7 @@ function App() {
       </div>
       <div className="container bg-white d-flex flex-column align-items-center justify-content-center">
         <div className="d-flex flex-column w-100 text-center px-2 my-4">
-          <h1 className="mb-1 fw-bold">ABOUT ME</h1>
+          <h1 className="mb-1 fw-bold mt-5">ABOUT ME</h1>
           <hr className="m-0" />
         </div>
 
@@ -446,7 +446,7 @@ function App() {
         <div className="d-flex flex-column align-items-center mt-5">
           <Image
             src={Aboutmepicture}
-            style={{ width: "100%" }}
+            style={{ width: "87%" }}
             className="mb-3"
           ></Image>
         </div>
@@ -454,7 +454,7 @@ function App() {
 
       <div className="container bg-light d-flex flex-column align-items-center justify-content-center">
         <div className="d-flex flex-column w-100 text-center px-2 my-4">
-          <h1 className="mb-1 fw-bold">CONTACT ME</h1>
+          <h1 className="mb-1 fw-bold mt-5">CONTACT ME</h1>
           <hr className="m-0" />
         </div>
 
