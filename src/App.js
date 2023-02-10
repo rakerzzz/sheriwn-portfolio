@@ -148,20 +148,21 @@ function App() {
         <div className="d-flex flex-column align-items-center mx-4">
           <h3 className="mt-4 fw-bold">UI/UX Designer</h3>
           <p className="text-center lh-sm">
-            As a UI/UX Designer I translate the manual process into Automated
-            Process through gathering specification and analyze it to convert
-            into user-friendly interface.
+            As a UI/UX Designer, I translate the manual process into Automated
+            Processes by gathering specifications and analyzing them to convert
+            them into a user-friendly interface.
           </p>
 
           <h3 className="mt-4 fw-bold">Front-end Web Developer</h3>
           <p className="text-center lh-sm">
-            Converting UI Wireframes into web design pages and applying
-            functionalities with standard and clean code implementations.
+            Converting UI Wireframes into code-based web design pages and
+            applying functionalities with standard and clean code
+            implementations.
           </p>
         </div>
       </div>
-      <div className="container  h-100 bg-white d-flex flex-column align-items-center justify-content-center fw-bold">
-        <div className="d-flex flex-column w-100 text-center px-2 mb-4">
+      <div className="container  bg-white d-flex flex-column align-items-center justify-content-center">
+        <div className="d-flex flex-column w-100 text-center px-2 my-4">
           <h1 className="mb-1 fw-bold">SKILLS</h1>
           <hr className="m-0" />
         </div>
@@ -243,7 +244,10 @@ function App() {
               ></Image>
             </div>
             <div className="col-3 px-0 d-flex flex-column justify-content-center align-items-center">
-              <h6 className="mb-1 text-center" style={{ fontSize: ".7rem" }}>
+              <h6
+                className="mb-1 text-center fw-bolder"
+                style={{ fontSize: ".7rem" }}
+              >
                 DIGITAL OCEAN
               </h6>
               <Image
@@ -265,13 +269,22 @@ function App() {
           </div>
         </div>
 
-        <div className="d-flex flex-column w-100 text-center px-4 my-3">
-          <h1 className="mb-1 fw-bold">Description about my skill</h1>
+        <div className="d-flex flex-column w-100 text-center px-4 my-3 mb-5">
+          <h1 className="mb-1 fw-bold">Description of my Skills</h1>
           <p className="lh-sm">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis,
-            nam est! Reiciendis, neque accusantium porro ipsam aliquid soluta
-            obcaecati necessitatibus? Lorem ipsum dolor sit amet. Lorem ipsum
-            dolor sit amet.
+            Description of my Skills My Technology Stack Skill is also my road
+            map for being a web developer to create web applications as a web
+            developer I started in wireframing on how the system or application
+            works based on the client's specifications it's like making a
+            blueprint of a house for building it, then jumping to coding process
+            using MERN Stack Technology. And using GitHub for version control
+            and collaborating with other developers to manage our project code
+            repositories every progress of our work are stored in GitHub.
+            finally, Digital Ocean Technology will host the web application to
+            access the system internationally. There is a lot of technology out
+            there to build a better web application but for now this is my
+            fundamentals skills for building a web application and not stopping
+            to strive to learn more.
           </p>
         </div>
       </div>
@@ -302,9 +315,10 @@ function App() {
               <Card.Title className="fw-bold">
                 MERCANTILE TRAVEL INSURANCE
               </Card.Title>
-              <Card.Text className="lh-sm">
-                Some quick example text to build on the card title and make up
-                the bulk of the card's content.
+              <Card.Text className="lh-sm project-ellipsis">
+                Web Application for applying for travel insurance with a
+                paperless process and making payments online with notification
+                thru email.
               </Card.Text>
             </Card.Body>
           </Card>
@@ -327,9 +341,10 @@ function App() {
 
             <Card.Body>
               <Card.Title className="fw-bold">FIGARO iMANAGE SYSTEM</Card.Title>
-              <Card.Text className="lh-sm">
-                Some quick example text to build on the card title and make up
-                the bulk of the card's content.
+              <Card.Text className="lh-sm project-ellipsis">
+                Ticketing System for store issues and Online Chat Support for
+                the employees of the company, soon adding a module for
+                e-learning system.
               </Card.Text>
             </Card.Body>
           </Card>
@@ -352,9 +367,11 @@ function App() {
 
             <Card.Body>
               <Card.Title className="fw-bold">JAPAN SUSHI ACADEMY</Card.Title>
-              <Card.Text className="lh-sm">
-                Some quick example text to build on the card title and make up
-                the bulk of the card's content.
+              <Card.Text className="lh-sm project-ellipsis">
+                Student management system for candidates who wants to be sushi
+                chef. and e-learning modules to train the student online by
+                watching tutorial videos also has a restaurant management system
+                for training a student hands-on.
               </Card.Text>
             </Card.Body>
           </Card>
@@ -377,27 +394,49 @@ function App() {
 
             <Card.Body>
               <Card.Title className="fw-bold">NQ-INVENTORY SYSTEM</Card.Title>
-              <Card.Text className="lh-sm">
-                Some quick example text to build on the card title and make up
-                the bulk of the card's content.
+              <Card.Text className="lh-sm project-ellipsis">
+                use to manage and track the flow of goods, raw materials, and
+                finished products. The purpose of an inventory system is to
+                ensure that a company has the right amount of stock on hand to
+                meet customer demand and to minimize excess inventory costs.
               </Card.Text>
             </Card.Body>
           </Card>
         </div>
       </div>
-      <div className="container h-100 bg-white d-flex flex-column align-items-center justify-content-center">
+      <div className="container bg-white d-flex flex-column align-items-center justify-content-center">
         <div className="d-flex flex-column w-100 text-center px-2 my-4">
           <h1 className="mb-1 fw-bold">ABOUT ME</h1>
           <hr className="m-0" />
         </div>
 
         <div className="d-flex flex-column w-100 align-items-center text-center px-4 my-3">
-          <h1 className="mb-1 fw-bold">Description about my skill</h1>
+          <h1 className="mb-1 fw-bold">Web Developer Journey</h1>
           <p className="lh-sm">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis,
-            nam est! Reiciendis, neque accusantium porro ipsam aliquid soluta
-            obcaecati necessitatibus? Lorem ipsum dolor sit amet. Lorem ipsum
-            dolor sit amet.
+            I started as a trainee in a start-up company called MWeeb I focused
+            on the fundamentals of how to be a front-end web developer for two
+            months, the three fundamentals that I study are HTML, CSS, and
+            JAVASCRIPT while learning the fundamentals I used to join on the
+            client's meeting to gather and analyze the specification of the web
+            application system that they need, and started to learn the
+            wireframing process to translate the specification into UI/UX using
+            FIGMA then converting it into code using HTML CSS later on I used
+            CSS framework called bootstrap and it helps me to work efficiently
+            and increase productivity using bootstrap. then later on they
+            introduce me to code on React using MERN Technology and Model View
+            Presenter(MVP) architectural pattern for clean, readable, and
+            maintainable code. At that time they also taught me to use GitHub
+            for version controlling and collaborating with other developers in
+            the company. most of my tasks are in wireframing and coding a UI
+            into react app, sometimes they let me study how to use API and fetch
+            the data to build scalable and flexible UI so when I turn over to
+            the backend team it will take less time to work on it. I have
+            something more to learn, the software industry environment is so
+            huge, and my eagerness to learn more is exciting for me to explore
+            more technology in web development, lastly for me, health is wealth
+            in taking care of my mental health and physical body is important
+            and choosing a good environment in work will maintain my good health
+            and peace of mind.
           </p>
           <Button className="mt-3" variant="dark" style={{ width: "50%" }}>
             DOWNLOAD CV
@@ -412,6 +451,7 @@ function App() {
           ></Image>
         </div>
       </div>
+
       <div className="container bg-light d-flex flex-column align-items-center justify-content-center">
         <div className="d-flex flex-column w-100 text-center px-2 my-4">
           <h1 className="mb-1 fw-bold">CONTACT ME</h1>
@@ -441,7 +481,7 @@ function App() {
           </Button>
         </Form>
 
-        <div className="d-flex flex-column px-4 w-100 my-4">
+        <div className="d-flex flex-column px-4 w-100 mt-4 mb-5">
           <h1 className="mb-1 fw-bold">Contact Info</h1>
           <div className="row justify-content-center mt-2 mb-4">
             {/* logo x name */}
@@ -457,7 +497,10 @@ function App() {
               <div className="lh-sm fw-bold" style={{ fontSize: ".8rem" }}>
                 UI/UX Designer
               </div>
-              <div className="lh-sm fw-bold" style={{ fontSize: ".8rem" }}>
+              <div
+                className="lh-sm fw-bold text-nowrap"
+                style={{ fontSize: ".8rem" }}
+              >
                 Front-end Web Developer
               </div>
             </div>
@@ -478,7 +521,7 @@ function App() {
             <div>labradorsherwinreyes@gmail.com</div>
           </div>
 
-          <div className="d-flex justify-content-center  mb-3">
+          <div className="d-flex justify-content-center ">
             <Facebook className="m-2" size={30} />
             <Linkedin className="m-2" size={30} />
             <Github className="m-2" size={30} />
