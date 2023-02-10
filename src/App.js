@@ -22,9 +22,10 @@ import Mercantilbanner from "./assets/img/projects/Travel_App_Header2.png";
 import Figarobanner from "./assets/img/projects/figaroimanage.png";
 import JapanSushibanner from "./assets/img/projects/japansushibanner.png";
 import NQinventorybanner from "./assets/img/projects/nq.png";
-import Aboutmepicture from "./assets/img/aboutme/samplepicture.png";
+import Aboutmepicture from "./assets/img/aboutme/Aboutme.png";
 import SLlogo from "./assets/img/SLlogo.png";
 import SLprofile from "./assets/img/SherwinProfile.png";
+import "./assets/css/custom.css";
 
 const containerStyles = {
   backgroundImage: `url(${Githublogo})`,
@@ -42,18 +43,102 @@ const containerStyles = {
 function App() {
   return (
     <main className="vh-100 bg-secondary overflow-auto">
-      <div className="container h-100 bg-light d-flex flex-column align-items-center justify-content-center fw-bold pb-4">
+      <div className="container h-100 bg-light d-flex flex-column align-items-center justify-content-center pb-4">
         {/* header */}
         <div className="d-flex flex-column align-items-center">
-          <Image
+          {/* <Image
             src={SLprofile}
             style={{ width: "180px", height: "180px" }}
-            className="mb-3 rounded-4"
-          ></Image>
-          <h1 className="m-0 fs-1">Sherwin Labrador</h1>
-          <p className="m-0">UI/UX Designer</p>
-          <p className="m-0">Front-end Web Developer</p>
-          <div className="d-flex justify-content-between ">
+            className="mb-3 rounded-4 border border-2 border-secondary"
+          /> */}
+
+          <svg
+            className="Playground__svg customsvg mb-3 rounded-4 border border-2 border-secondary"
+            width="180"
+            height="180"
+          >
+            <defs>
+              <filter
+                id="filter"
+                x="-20%"
+                y="-20%"
+                width="350%"
+                height="300%"
+                filterUnits="objectBoundingBox"
+                primitiveUnits="userSpaceOnUse"
+                colorInterpolationFilters="linearRGB"
+              >
+                <feMorphology
+                  operator="dilate"
+                  radius="10 0"
+                  x="0%"
+                  y="0%"
+                  width="100%"
+                  height="100%"
+                  in="SourceGraphic"
+                  result="morphology1"
+                ></feMorphology>
+              </filter>
+              <filter
+                id="filter-2"
+                x="-20%"
+                y="-20%"
+                width="350%"
+                height="500%"
+                filterUnits="objectBoundingBox"
+                primitiveUnits="userSpaceOnUse"
+                colorInterpolationFilters="linearRGB"
+              >
+                <feMorphology
+                  operator="dilate"
+                  radius="10 2"
+                  x="0%"
+                  y="0%"
+                  width="100%"
+                  height="100%"
+                  in="SourceGraphic"
+                  result="morphology1"
+                ></feMorphology>
+              </filter>
+              <filter
+                id="filter-3"
+                x="-20%"
+                y="-20%"
+                width="350%"
+                height="300%"
+                filterUnits="objectBoundingBox"
+                primitiveUnits="userSpaceOnUse"
+                colorInterpolationFilters="linearRGB"
+              >
+                <feMorphology
+                  operator="dilate"
+                  radius="15 0"
+                  x="0%"
+                  y="0%"
+                  width="100%"
+                  height="100%"
+                  in="SourceGraphic"
+                  result="morphology1"
+                ></feMorphology>
+              </filter>
+            </defs>
+
+            {/* <!-- 	go ahead and change the image and make it your own --> */}
+            <image
+              x="0%"
+              y="0%"
+              width="180"
+              height="180"
+              preserveAspectRatio="xMidYMid slice"
+              xlinkHref={SLprofile}
+              id="my-image"
+            ></image>
+          </svg>
+
+          <h1 className="m-0 fs-1 fw-bold mb-0">Sherwin Labrador</h1>
+          <p className="m-0 fw-bold lh-sm">UI/UX Designer</p>
+          <p className="m-0 fw-bold lh-sm">Front-end Web Developer</p>
+          <div className="d-flex justify-content-between  mt-2">
             <Facebook className="m-2" size={20} />
             <Linkedin className="m-2" size={20} />
             <Github className="m-2" size={20} />
@@ -61,14 +146,14 @@ function App() {
         </div>
         {/* description */}
         <div className="d-flex flex-column align-items-center mx-4">
-          <h3 className="mt-4">UI/UX Designer</h3>
+          <h3 className="mt-4 fw-bold">UI/UX Designer</h3>
           <p className="text-center lh-sm">
             As a UI/UX Designer I translate the manual process into Automated
             Process through gathering specification and analyze it to convert
             into user-friendly interface.
           </p>
 
-          <h3 className="mt-4">Front-end Web Developer</h3>
+          <h3 className="mt-4 fw-bold">Front-end Web Developer</h3>
           <p className="text-center lh-sm">
             Converting UI Wireframes into web design pages and applying
             functionalities with standard and clean code implementations.
@@ -314,12 +399,12 @@ function App() {
             obcaecati necessitatibus? Lorem ipsum dolor sit amet. Lorem ipsum
             dolor sit amet.
           </p>
-          <Button variant="dark" style={{ width: "50%" }}>
+          <Button className="mt-3" variant="dark" style={{ width: "50%" }}>
             DOWNLOAD CV
           </Button>
         </div>
 
-        <div className="d-flex flex-column align-items-center">
+        <div className="d-flex flex-column align-items-center mt-5">
           <Image
             src={Aboutmepicture}
             style={{ width: "100%" }}
