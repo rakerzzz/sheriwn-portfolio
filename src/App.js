@@ -1,5 +1,5 @@
 // import Button from "react-bootstrap/Button";
-import { Button, Image, Card, Form } from "react-bootstrap";
+import { Button, Image, Card, Form, Modal } from "react-bootstrap";
 import {
   Facebook,
   Linkedin,
@@ -26,6 +26,69 @@ import Aboutmepicture from "./assets/img/aboutme/Aboutme.png";
 import SLlogo from "./assets/img/SLlogo.png";
 import SLprofile from "./assets/img/SherwinProfile.png";
 import "./assets/css/custom.css";
+import React, { useState, useEffect } from "react";
+import ImageGallery from "react-image-gallery";
+import projectImages from "./response/projectImages.json";
+
+// const images = [
+//   {
+//     original:
+//       "https://drive.google.com/uc?export=download&id=1AJNM9rPtOBIgftAkazdzdJyDOb0v-JU_",
+//     thumbnail:
+//       "https://drive.google.com/uc?export=download&id=1AJNM9rPtOBIgftAkazdzdJyDOb0v-JU_",
+//   },
+//   {
+//     original:
+//       "https://drive.google.com/uc?export=download&id=1AJNM9rPtOBIgftAkazdzdJyDOb0v-JU_",
+//     thumbnail:
+//       "https://drive.google.com/uc?export=download&id=1AJNM9rPtOBIgftAkazdzdJyDOb0v-JU_",
+//   },
+//   {
+//     original:
+//       "https://drive.google.com/uc?export=download&id=1AJNM9rPtOBIgftAkazdzdJyDOb0v-JU_",
+//     thumbnail:
+//       "https://drive.google.com/uc?export=download&id=1AJNM9rPtOBIgftAkazdzdJyDOb0v-JU_",
+//   },
+// ];
+
+class MyGallery extends React.Component {
+  constructor(props) {
+    super(props);
+    this.app = props.app;
+    console.log(this.app);
+  }
+
+  render() {
+    return (
+      <ImageGallery
+        items={projectImages[this.app]}
+        showFullscreenButton={false}
+        showPlayButton={false}
+      />
+    );
+  }
+}
+
+function MyVerticallyCenteredModal(props) {
+  // console.log(props.app);
+  return (
+    <Modal
+      {...props}
+      size="lg"
+      aria-labelledby="contained-modal-title-vcenter"
+      centered
+    >
+      <Modal.Header className="py-1" closeButton>
+        <Modal.Title id="contained-modal-title-vcenter">
+          Project Screenshots
+        </Modal.Title>
+      </Modal.Header>
+      <Modal.Body className="px-0 pt-0">
+        <MyGallery app={props.app} />
+      </Modal.Body>
+    </Modal>
+  );
+}
 
 const containerStyles = {
   backgroundImage: `url(${Githublogo})`,
@@ -41,8 +104,24 @@ const containerStyles = {
 };
 
 function App() {
+  const [modalShow, setModalShow] = useState(false);
+  const [projectName, setProjectName] = useState("");
+  // console.log(projectImages);
+
+  const handleClick = (message) => {
+    setModalShow(true);
+    setProjectName(message);
+  };
+
+  // console.log(projectName);
+
   return (
     <main className="vh-100 bg-secondary overflow-auto">
+      <MyVerticallyCenteredModal
+        show={modalShow}
+        app={projectName}
+        onHide={() => setModalShow(false)}
+      />
       <div className="container h-100 bg-light d-flex flex-column align-items-center justify-content-center pb-4">
         {/* header */}
         <div className="d-flex flex-column align-items-center">
@@ -161,6 +240,7 @@ function App() {
           </p>
         </div>
       </div>
+
       <div className="container  bg-white d-flex flex-column align-items-center justify-content-center">
         <div className="d-flex flex-column w-100 text-center px-2 my-4">
           <h1 className="mb-1 fw-bold mt-5">SKILLS</h1>
@@ -272,15 +352,20 @@ function App() {
         <div className="d-flex flex-column w-100 text-center px-4 my-3 mb-5">
           <h1 className="mb-1 fw-bold">Description of my Skills</h1>
           <p className="lh-sm">
-            Description of my Skills My Technology Stack Skill is also my road
-            map for being a web developer to create web applications as a web
-            developer I started in wireframing on how the system or application
-            works based on the client's specifications it's like making a
-            blueprint of a house for building it, then jumping to coding process
-            using MERN Stack Technology. And using GitHub for version control
-            and collaborating with other developers to manage our project code
-            repositories every progress of our work are stored in GitHub.
-            finally, Digital Ocean Technology will host the web application to
+            My Technology Stack Skill is also my road map for being a web
+            developer to create web applications as a web developer I started in
+            wireframing on how the system or application works based on the
+            client's specifications it's like making a blueprint of a house for
+            building it.
+          </p>
+          <p className="lh-sm">
+            Then jumping to coding process using MERN Stack Technology. And
+            using GitHub for version control and collaborating with other
+            developers to manage our project code repositories every progress of
+            our work are stored in GitHub.
+          </p>
+          <p className="lh-sm">
+            Finally, Digital Ocean Technology will host the web application to
             access the system internationally. There is a lot of technology out
             there to build a better web application but for now this is my
             fundamentals skills for building a web application and not stopping
@@ -306,6 +391,7 @@ function App() {
                 className="position-absolute bottom-0 end-0 mb-1 me-2 py-0 px-3"
                 variant="dark"
                 size="sm"
+                onClick={() => handleClick("mecantileImages")}
               >
                 View Details
               </Button>
@@ -334,6 +420,7 @@ function App() {
                 className="position-absolute bottom-0 end-0 mb-1 me-2 py-0 px-3"
                 variant="dark"
                 size="sm"
+                onClick={() => handleClick("figaroImages")}
               >
                 View Details
               </Button>
@@ -360,6 +447,7 @@ function App() {
                 className="position-absolute bottom-0 end-0 mb-1 me-2 py-0 px-3"
                 variant="dark"
                 size="sm"
+                onClick={() => handleClick("jsaImages")}
               >
                 View Details
               </Button>
@@ -387,6 +475,7 @@ function App() {
                 className="position-absolute bottom-0 end-0 mb-1 me-2 py-0 px-3"
                 variant="dark"
                 size="sm"
+                onClick={() => handleClick("nqinventoryImages")}
               >
                 View Details
               </Button>
@@ -416,31 +505,46 @@ function App() {
             I started as a trainee in a start-up company called MWeeb I focused
             on the fundamentals of how to be a front-end web developer for two
             months, the three fundamentals that I study are HTML, CSS, and
-            JAVASCRIPT while learning the fundamentals I used to join on the
-            client's meeting to gather and analyze the specification of the web
+            JAVASCRIPT.
+          </p>
+          <p className="lh-sm">
+            While learning the fundamentals I used to join on the client's
+            meeting to gather and analyze the specification of the web
             application system that they need, and started to learn the
             wireframing process to translate the specification into UI/UX using
             FIGMA then converting it into code using HTML CSS later on I used
             CSS framework called bootstrap and it helps me to work efficiently
-            and increase productivity using bootstrap. then later on they
-            introduce me to code on React using MERN Technology and Model View
-            Presenter(MVP) architectural pattern for clean, readable, and
-            maintainable code. At that time they also taught me to use GitHub
-            for version controlling and collaborating with other developers in
-            the company. most of my tasks are in wireframing and coding a UI
-            into react app, sometimes they let me study how to use API and fetch
-            the data to build scalable and flexible UI so when I turn over to
-            the backend team it will take less time to work on it. I have
-            something more to learn, the software industry environment is so
-            huge, and my eagerness to learn more is exciting for me to explore
-            more technology in web development, lastly for me, health is wealth
-            in taking care of my mental health and physical body is important
-            and choosing a good environment in work will maintain my good health
-            and peace of mind.
+            and increase productivity using bootstrap.
           </p>
-          <Button className="mt-3" variant="dark" style={{ width: "50%" }}>
+          <p className="lh-sm">
+            Then later on they introduce me to code on React using MERN
+            Technology and Model View Presenter(MVP) architectural pattern for
+            clean, readable, and maintainable code. At that time, they also
+            taught me to use GitHub for version controlling and collaborating
+            with other developers in the company.
+          </p>
+          <p className="lh-sm">
+            Most of my tasks are in wireframing and coding a UI into react app,
+            sometimes they let me study how to use API and fetch the data to
+            build scalable and flexible UI so when I turn over to the backend
+            team it will take less time to work on it.
+          </p>
+          <p className="lh-sm">
+            I have something more to learn, the software industry environment is
+            so huge, and my eagerness to learn more is exciting for me to
+            explore more technology in web development, lastly for me, health is
+            wealth in taking care of my mental health and physical body is
+            important and choosing a good environment in work will maintain my
+            good health and peace of mind.
+          </p>
+          <a
+            href="https://drive.google.com/uc?export=download&id=1c8C7_LF3Le0VhHucPUDZ4uw3BuPE-v5P"
+            class="btn btn-dark"
+            role="button"
+            style={{ width: "50%" }}
+          >
             DOWNLOAD CV
-          </Button>
+          </a>
         </div>
 
         <div className="d-flex flex-column align-items-center mt-5">
