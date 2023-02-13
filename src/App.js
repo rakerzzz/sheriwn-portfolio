@@ -275,18 +275,14 @@ function App() {
             <div className="col-lg-6 col-sm-12 d-lg-flex align-items-center">
               {/* description */}
               <div className="d-flex flex-column align-items-center mx-4">
-                <h3 className="mt-4 fw-bold animate__animated animate__backInRight">
-                  UI/UX Designer
-                </h3>
-                <p className="text-center lh-sm animate__animated animate__fadeIn animate__delay-1s animate__slow">
+                <h3 className="mt-4 fw-bold ">UI/UX Designer</h3>
+                <p className="text-center lh-sm ">
                   As a UI/UX Designer, I translate the manual process into
                   Automated Processes by gathering specifications and analyzing
                   them to convert them into a user-friendly interface.
                 </p>
-                <h3 className="mt-4 fw-bold animate__animated animate__backInRight animate__delay-1s">
-                  Front-end Web Developer
-                </h3>
-                <p className="text-center lh-sm animate__animated animate__fadeIn animate__delay-2s animate__slow">
+                <h3 className="mt-4 fw-bold ">Front-end Web Developer</h3>
+                <p className="text-center lh-sm">
                   Converting UI Wireframes into code-based web design pages and
                   applying functionalities with standard and clean code
                   implementations.
